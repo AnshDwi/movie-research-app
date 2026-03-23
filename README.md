@@ -11,9 +11,6 @@ A modern movie discovery platform that allows users to explore trending movies, 
 
 ## 📸 Screenshots
 
-### 🏠 Homepage
-![Homepage](screenshots/screenshotshome.png)
-
 ### 🎨 UI Experience
 ![UI](screenshots/screenshotsui.png)
 
