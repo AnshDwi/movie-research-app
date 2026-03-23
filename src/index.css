@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply min-h-screen font-body text-slate-900 antialiased transition-colors duration-500 dark:text-slate-100;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+  }
+
+  button,
+  input {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-[2rem] border border-white/25 bg-white/45 shadow-soft backdrop-blur-2xl dark:border-white/10 dark:bg-white/5;
+  }
+
+  .neo-panel {
+    @apply rounded-[2rem] border border-white/30 bg-slate-100/80 shadow-[12px_12px_30px_rgba(15,23,42,0.08),-12px_-12px_30px_rgba(255,255,255,0.65)] dark:border-white/10 dark:bg-slate-900/75 dark:shadow-[12px_12px_30px_rgba(0,0,0,0.28),-12px_-12px_30px_rgba(255,255,255,0.02)];
+  }
+
+  .section-title {
+    @apply font-display text-xl font-bold tracking-tight text-slate-950 dark:text-white;
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    animation: shimmer 1.8s infinite;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
