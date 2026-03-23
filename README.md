@@ -2,6 +2,8 @@
 
 Afterglow is a production-oriented movie research and recommendation platform built with React, Tailwind CSS, React Query, React Three Fiber, Framer Motion, Recharts, and an Express API scaffold.
 
+# Live Link: https://vercel.com/anshdwis-projects/movie-research-app
+
 ## What is included
 
 - 3D movie carousel with floating posters
